@@ -1,0 +1,109 @@
+:root {
+  --teal-050: #effcf6;
+  --teal-100: #c6f7e2;
+  --teal-200: #8eedc7;
+  --teal-300: #65d6ad;
+  --teal-400: #3ebd93;
+  --teal-500: #27ab83;
+  --teal-600: #199473;
+  --teal-700: #147d64;
+  --teal-800: #0c6b58;
+  --teal-900: #014d40;
+  --blue-grey-050: #f0f4f8;
+  --blue-grey-100: #d9e2ec;
+  --blue-grey-200: #bcccdc;
+  --blue-grey-300: #9fb3c8;
+  --blue-grey-400: #829ab1;
+  --blue-grey-500: #627d98;
+  --blue-grey-600: #486581;
+  --blue-grey-700: #334e68;
+  --blue-grey-800: #243b53;
+  --blue-grey-900: #102a43;
+  --info: #13a4ed;
+  --danger: #fc035a;
+}
+
+html {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 125%;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--blue-grey-900);
+  height: 100vh;
+}
+
+body {
+  background: var(--blue-grey-100);
+}
+* {
+  box-sizing: border-box;
+}
+#app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--blue-grey-400);
+  border-radius: 5px;
+  padding: 10px;
+  background: var(--blue-grey-050);
+  margin-bottom: 20px;
+  color: var(--blue-grey-700);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: medium;
+}
+
+/* When the inputs get focus, do something */
+.form-control:focus {
+  background-color: var(--blue-grey-100);
+  outline: none;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-size: 90%;
+  color: var(--blue-grey-500);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-size: 90%;
+  color: var(--blue-grey-500);
+}
+
+::placeholder {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-size: 90%;
+  color: var(--blue-grey-500);
+}
+
+.btn {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: var(--info);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  /* opacity: 0.8; */
+  border-radius: 5px;
+  height: 40px;
+}
+
+.btn.btn-box {
+  width: 40px;
+}
+
+.btn.cancel {
+  background-color: var(--blue-grey-300);
+}
+
+.btn.danger {
+  background-color: var(--danger);
+}

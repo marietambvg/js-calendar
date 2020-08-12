@@ -1,0 +1,46 @@
+<main>
+    <div class="calendar-header">
+        <button class="btn" onclick="openAddEventForm()">Add event</button>
+    </div>
+    <div class="calendar">
+        <div class="month-header">
+            <button class="btn btn-box" onclick='renderCalendar("-1")'>&lArr;</button>
+            <div class="month-indicator">
+            </div>
+            <button class="btn btn-box" onclick='renderCalendar("1")'>&rArr;</button>
+        </div>
+        <div class="day-of-week">
+            <div>Monday</div>
+            <div>Tueesday</div>
+            <div>Wednessday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+            <div>Sunday</div>
+        </div>
+        <div class="date-grid">
+
+        </div>
+    </div>
+</main>
+<aside class='calendar-events'>
+</aside>
+<div class="form-popup" id="addEventForm">
+    <form class="form-container">
+        <div>Event Details</div>
+
+        <label for="title"><b>Title</b></label>
+        <input class="form-control" id="eventTitle" type="text" placeholder="Title" name="title" required />
+
+        <label for="participants"><b>Participants</b></label>
+        <input class="form-control" id="participants" type="text" placeholder="Enter Participants" name="participants"
+            required />
+        <label for="details"><b>Details</b></label>
+        <textarea class="form-control" id="details" type="text" placeholder="Enter details" name="details"
+            required></textarea>
+        <div class="form-footer">
+            <button type="submit" id="saveEvent" onclick="addEvent()" class="btn success">Save</button>
+            <button type="button" class="btn cancel" onclick="closeAddEventForm()">Cancel</button>
+        </div>
+    </form>
+</div>

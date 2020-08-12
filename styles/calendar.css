@@ -1,0 +1,171 @@
+main,
+aside {
+  margin: 10px auto 0 auto;
+  padding: 1.5em;
+  background-color: whitesmoke;
+  border: 2px solid var(--blue-grey-200);
+  border-radius: 8px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+main {
+  max-width: max-content;
+  min-width: 60vw;
+  margin-right: 15px;
+}
+
+.month-header,
+.events-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.month-indicator,
+.events-header {
+  color: var(--blue-grey-700);
+  text-align: center;
+  font-weight: 500;
+}
+
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 14%);
+  grid-column-gap: 0.5%;
+  grid-row-gap: 1%;
+}
+
+.day-of-week {
+  margin-top: 1.25em;
+}
+
+.day-of-week > * {
+  font-size: 0.7em;
+  color: var(--blue-grey-400);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* Dates */
+.date-grid {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.date-grid-item {
+  height: 15vh;
+  border: 1px solid var(--blue-grey-400);
+  border-radius: 5px;
+}
+.date-grid-item.active {
+  background-color: var(--blue-grey-100);
+  color: var(--teal-900);
+}
+
+.date-grid-item.today {
+  border-bottom: 5px solid var(--blue);
+}
+
+.date-grid div {
+  display: flex;
+}
+
+.date-grid div time {
+  position: relative;
+  border: 0;
+
+  background-color: transparent;
+  color: var(--blue-grey-600);
+  margin-right: 10px;
+}
+
+.date-grid div:hover,
+.date-grid div:focus {
+  outline: none;
+  background-color: var(--blue-grey-050);
+  color: var(--blue-grey-700);
+}
+
+.date-grid div:active,
+.date-grid div.is-selected {
+  background-color: var(--blue-grey-400);
+  color: var(--teal-900);
+}
+
+.calendar-events,
+.events,
+.event {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.events {
+  overflow-y: auto;
+}
+
+.event {
+  border: 1px solid var(--blue-grey-400);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.event .btn {
+  display: flex;
+  align-self: flex-end;
+}
+
+.grid-day-events {
+  display: flex;
+  flex-direction: column;
+  font-size: 70%;
+  color: var(--blue-grey-700);
+  overflow-y: hidden;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: row;
+  font-size: 100%;
+  color: var(--blue-grey-700);
+}
+.event-info strong {
+  width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  max-width: 50%;
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid var(--blue-grey-200);
+  border-radius: 5px;
+  z-index: 9;
+  color: var(--blue-grey-700);
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-footer .btn {
+  margin-left: 10px;
+}
